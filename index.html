@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PHARMA ESTUDIOS AVANZADOS M4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0e1626;
+      color: #c3f0fd;
+    }
+    header {
+      background: linear-gradient(90deg, #0ff0fc, #00ff94);
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #00ff94;
+      margin-top: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #00ff94;
+      text-align: left;
+    }
+    img {
+      width: 60px;
+    }
+    .quiz {
+      background-color: #1c2f4d;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #00ff94;
+      border-top: 1px solid #00ff94;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    PHARMA ESTUDIOS AVANZADOS M4
+  </header>
+
+  <section>
+    <h2>💊 Antidiabéticos</h2>
+    <table>
+      <tr><th>Nombre Comercial</th><th>Principio Activo</th><th>Uso</th><th>Imagen</th><th>Más Info</th></tr>
+      <tr>
+        <td>Jardiance</td>
+        <td>Empagliflozina</td>
+        <td>Diabetes tipo 2</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Empagliflozin.svg/1200px-Empagliflozin.svg.png" alt="Empagliflozina"></td>
+        <td><a href="https://www.eltiempo.com/salud/los-30-medicamentos-mas-dispensados-en-colombia-gasto-se-concentra-en-cancer-diabetes-y-enfermedades-autoinmunes-3468130" target="_blank">Ver más</a></td>
+      </tr>
+      <tr>
+        <td>Glucophage</td>
+        <td>Metformina</td>
+        <td>Diabetes tipo 2</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Metformin.svg/1200px-Metformin.svg.png" alt="Metformina"></td>
+        <td><a href="https://universidadeuropea.com/blog/principio-activo/" target="_blank">Ver más</a></td>
+      </tr>
+    </table>
+
+    <h2>🧬 Antineoplásicos</h2>
+    <table>
+      <tr><th>Nombre Comercial</th><th>Principio Activo</th><th>Uso</th><th>Imagen</th><th>Más Info</th></tr>
+      <tr>
+        <td>Keytruda</td>
+        <td>Pembrolizumab</td>
+        <td>Cáncer de pulmón, melanoma</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Pembrolizumab.svg/1200px-Pembrolizumab.svg.png" alt="Pembrolizumab"></td>
+        <td><a href="https://www.consalud.es/salud35/economia/medicamentos-mas-vendidos-ultimo-ano.html" target="_blank">Ver más</a></td>
+      </tr>
+      <tr>
+        <td>Avastin</td>
+        <td>Bevacizumab</td>
+        <td>Cáncer colorrectal, mama</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Bevacizumab.svg/1200px-Bevacizumab.svg.png" alt="Bevacizumab"></td>
+        <td><a href="https://cobcantabria.es/medicamento/medicamentos-mas-vendidos-en-el-mundo/" target="_blank">Ver más</a></td>
+      </tr>
+    </table>
+
+    <h2>🧠 Quiz: ¿Dominas los antidiabéticos?</h2>
+    <div class="quiz" id="quiz-section">
+      <p id="question">¿Cuál es el principio activo de Jardiance?</p>
+      <button onclick="checkAnswer('Empagliflozina')">Empagliflozina</button>
+      <button onclick="checkAnswer('Metformina')">Metformina</button>
+      <button onclick="checkAnswer('Insulina')">Insulina</button>
+      <p id="feedback"></p>
+    </div>
+
+    <section class="hidden" id="next-topic">
+      <h2>🚀 Tema desbloqueado: Antineoplásicos</h2>
+      <p>¡Has desbloqueado el siguiente módulo! Continúa tu aprendizaje.</p>
+    </section>
+  </section>
+
+  <footer>
+    © 2025 JPHM4. Todos los derechos reservados
+  </footer>
+
+  <script>
+    let score = 0;
+    let feedback = document.getElementById("feedback");
+    let nextSection = document.getElementById("next-topic");
+
+    function checkAnswer(answer) {
+      if (answer === "Empagliflozina") {
+        feedback.textContent = "✅ ¡Correcto!";
+        score = 100;
+        nextSection.classList.remove("hidden");
+      } else {
+        feedback.textContent = "❌ Incorrecto. Vuelve a intentarlo.";
+      }
+    }
+  </script>
+</body>
+</html>
